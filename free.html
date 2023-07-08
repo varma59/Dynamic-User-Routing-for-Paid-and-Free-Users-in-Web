@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Page with Ads</title>
+  <style>
+    /* Center the video */
+    #video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px; /* Adjust the height as needed */
+    }
+    
+    /* Style the video element */
+    video {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    
+    /* Position the ads around the video */
+    .ad-container {
+      position: fixed;
+      width: 200px; /* Adjust the size as needed */
+      height: 200px; /* Adjust the size as needed */
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 10px;
+    }
+    
+    .ad-container.top-left {
+      top: 10px;
+      left: 10px;
+    }
+    
+    .ad-container.top-right {
+      top: 10px;
+      right: 10px;
+    }
+    
+    .ad-container.bottom-left {
+      bottom: 10px;
+      left: 10px;
+    }
+    
+    .ad-container.bottom-right {
+      bottom: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="video-container">
+    <video controls autoplay>
+      <source src="files\1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <div class="ad-container top-left">
+    <!-- Ad content for top-left position -->
+    <img src="files\1.png" alt="Ad 1">
+    <p>Ad 1 description</p>
+  </div>
+  
+  <div class="ad-container top-right">
+    <!-- Ad content for top-right position -->
+    <img src="files\1.png" alt="Ad 2">
+    <p>Ad 2 description</p>
+  </div>
+  
+  <div class="ad-container bottom-left">
+    <!-- Ad content for bottom-left position -->
+    <img src="files\1.png" alt="Ad 3">
+    <p>Ad 3 description</p>
+  </div>
+  
+  <div class="ad-container bottom-right">
+    <!-- Ad content for bottom-right position -->
+    <img src="files\1.png" alt="Ad 4">
+    <p>Ad 4 description</p>
+  </div>
+</body>
+</html>

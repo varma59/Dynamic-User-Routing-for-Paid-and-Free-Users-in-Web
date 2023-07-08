@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+    
+    h1 {
+      margin-top: 0;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    
+    .radio-group {
+      margin-top: 10px;
+    }
+    
+    .radio-group label {
+      margin-right: 10px;
+    }
+    
+    .button-container {
+      text-align: center;
+    }
+    
+    .button-container button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    
+    <form id="login-form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      
+      <div class="form-group radio-group">
+        <label>User Type:</label>
+        <label><input type="radio" name="userType" value="free" checked> Free</label>
+        <label><input type="radio" name="userType" value="paid"> Paid</label>
+      </div>
+      
+      <div class="button-container">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    var loginForm = document.getElementById("login-form");
+    
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      var userType = document.querySelector('input[name="userType"]:checked').value;
+      
+      if (userType === "free") {
+        window.location.href = "free.html"; // Redirect to free user page
+      } else if (userType === "paid") {
+        window.location.href = "paid.html"; // Redirect to paid user page
+      }
+    });
+  </script>
+</body>
+</html>
